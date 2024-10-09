@@ -633,6 +633,7 @@ Client_GetParamIntValue
     PDHCPC_CONTEXT_LINK_OBJECT pCxtLink          = (PDHCPC_CONTEXT_LINK_OBJECT)hInsContext;
     PDML_DHCPC_FULL            pDhcpc            = (PDML_DHCPC_FULL)pCxtLink->hContext;
 
+    CcspTraceError(("%s-%d: ",  __FUNCTION__, __LINE__));
     /* check the parameter name and return the corresponding value */
     if (strcmp(ParamName, "LeaseTimeRemaining") == 0)
     {
