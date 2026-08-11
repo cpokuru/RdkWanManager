@@ -2,27 +2,26 @@
 """
 extract_datamodels.py
 =====================
-Generates the complete list of Device.X_RDK_WanManager.* datamodel parameters
-from the RdkWanManager XML config files — matching the output of:
+Generates the COMPLETE list of Device.X_RDK_WanManager.* datamodel parameters
+matching exactly what a live device returns via:
 
     dmcli eRT getv Device.X_RDK_WanManager.
 
-Two sources are combined:
-  1. config/RdkWanManager.xml     — v1 model (CPEInterface)
-  2. config/RdkWanManager_v2.xml  — v2 model (Interface / VirtualInterface / Group)
+Three sources are combined:
+  1. config/RdkWanManager.xml        — v1 CCSP DML (CPEInterface model)
+  2. config/RdkWanManager_v2.xml     — v2 CCSP DML (Interface/VirtualInterface/Group model)
+  3. Built-in rbus-only params       — registered in wanmgr_rbus_handler_apis.c via
+                                       rbus_regDataElements(), NOT in any XML file
 
-Table objects (dynamicTable / writableTable / staticTable) are expanded with
-configurable instance counts so you see real paths like:
-    Device.X_RDK_WanManager.Interface.1.Selection.Enable
-    Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.Mode
-    ...
+Auto-generated NumberOfEntries params (produced by the CCSP framework for every
+dynamicTable/writableTable/staticTable) are also added automatically.
 
 Usage:
     python3 tools/extract_datamodels.py [OPTIONS]
 
 Options:
     --repo-root PATH     Path to the repo root (default: two levels above this script)
-    --instances N        Number of instances to expand for each table (default: 2)
+    --instances N        Number of table instances to expand (default: 2)
     --output FORMAT      text (default) | dmcli | json | csv
     --xml v1|v2|both     Which XML file(s) to parse (default: both)
 
@@ -56,12 +55,169 @@ class DmParameter:
     data_type: str     # e.g. boolean, string, unsignedInt, int
     writable: bool     # True if writable
     object_path: str   # Parent object path
-    xml_file: str      # Which XML file it came from
+    source: str        # "xml_v1" | "xml_v2" | "rbus" | "auto"
 
 
 @dataclass
 class DataModelReport:
     parameters: List[DmParameter] = field(default_factory=list)
+
+
+# ---------------------------------------------------------------------------
+# Rbus-only parameters
+# (registered in wanMgrRbusDataElements[] and wanMgrIfacePublishElements[]
+#  in wanmgr_rbus_handler_apis.c — NOT declared in any XML file)
+# These are expanded per-instance where {i} appears.
+# ---------------------------------------------------------------------------
+
+# Top-level rbus properties (no instance expansion needed)
+RBUS_TOP_LEVEL_PARAMS = [
+    ("Device.X_RDK_WanManager.CurrentActiveInterface",  "CurrentActiveInterface",  "string",  False),
+    ("Device.X_RDK_WanManager.CurrentStatus",           "CurrentStatus",           "string",  False),
+    ("Device.X_RDK_WanManager.CurrentStandbyInterface", "CurrentStandbyInterface", "string",  False),
+    ("Device.X_RDK_WanManager.InterfaceAvailableStatus","InterfaceAvailableStatus","string",  False),
+    ("Device.X_RDK_WanManager.InterfaceActiveStatus",   "InterfaceActiveStatus",   "string",  False),
+    ("Device.X_RDK_WanManager.CurrentActiveDNS",        "CurrentActiveDNS",        "string",  False),
+    # Events (visible via dmcli but event-type, shown as string)
+    ("Device.X_RDK_WanManager.InitialScanComplete",     "InitialScanComplete",     "string",  False),
+    ("Device.X_RDK_WanManager.InterfaceIpStatus",       "InterfaceIpStatus",       "string",  False),
+]
+
+# Per-interface rbus properties (expanded for each Interface.{i} instance)
+# These are registered with {i} pattern in wanMgrIfacePublishElements
+RBUS_PER_IFACE_PARAMS = [
+    # suffix, param_name, data_type, writable
+    ("Selection.Enable",                         "Enable",      "boolean", True),
+    ("Alias",                                    "Alias",       "string",  True),
+    ("BaseInterfaceStatus",                      "BaseInterfaceStatus", "string", False),
+]
+
+# Per-virtual-interface rbus properties (expanded for Interface.{i}.VirtualInterface.{j})
+RBUS_PER_VIRTIF_PARAMS = [
+    ("Status",      "Status",      "string", False),
+    ("VlanStatus",  "VlanStatus",  "string", False),
+    ("IP.IPv4Address", "IPv4Address", "string", False),
+    ("IP.IPv6Address", "IPv6Address", "string", False),
+    ("IP.IPv6Prefix",  "IPv6Prefix",  "string", False),
+]
+
+# CPEInterface rbus properties (v1 compatibility, per Interface.{i} instance)
+RBUS_PER_CPE_PARAMS = [
+    ("Phy.Status",      "Status",     "string", False),
+    ("Wan.Status",      "Status",     "string", False),
+    ("Wan.LinkStatus",  "LinkStatus", "string", False),
+]
+
+
+def build_rbus_params(instances: int) -> List[DmParameter]:
+    """Build the full list of rbus-only DmParameter entries."""
+    params = []
+
+    # Top-level
+    for dm_path, pname, dtype, writable in RBUS_TOP_LEVEL_PARAMS:
+        params.append(DmParameter(
+            dm_path=dm_path,
+            param_name=pname,
+            data_type=dtype,
+            writable=writable,
+            object_path=dm_path.rsplit(".", 1)[0],
+            source="rbus",
+        ))
+
+    # Per Interface instance
+    for i in range(1, instances + 1):
+        iface_path = f"Device.X_RDK_WanManager.Interface.{i}"
+        for suffix, pname, dtype, writable in RBUS_PER_IFACE_PARAMS:
+            params.append(DmParameter(
+                dm_path=f"{iface_path}.{suffix}",
+                param_name=pname,
+                data_type=dtype,
+                writable=writable,
+                object_path=iface_path if "." not in suffix else f"{iface_path}.{suffix.rsplit('.', 1)[0]}",
+                source="rbus",
+            ))
+
+        # Per VirtualInterface instance under this Interface
+        for j in range(1, instances + 1):
+            virtif_path = f"{iface_path}.VirtualInterface.{j}"
+            for suffix, pname, dtype, writable in RBUS_PER_VIRTIF_PARAMS:
+                params.append(DmParameter(
+                    dm_path=f"{virtif_path}.{suffix}",
+                    param_name=pname,
+                    data_type=dtype,
+                    writable=writable,
+                    object_path=virtif_path if "." not in suffix else f"{virtif_path}.{suffix.rsplit('.', 1)[0]}",
+                    source="rbus",
+                ))
+
+        # CPEInterface compatibility (v1 paths)
+        cpe_path = f"Device.X_RDK_WanManager.CPEInterface.{i}"
+        for suffix, pname, dtype, writable in RBUS_PER_CPE_PARAMS:
+            params.append(DmParameter(
+                dm_path=f"{cpe_path}.{suffix}",
+                param_name=pname,
+                data_type=dtype,
+                writable=writable,
+                object_path=f"{cpe_path}.{suffix.rsplit('.', 1)[0]}",
+                source="rbus",
+            ))
+
+    return params
+
+
+# ---------------------------------------------------------------------------
+# NumberOfEntries auto-params
+# CCSP framework auto-generates these for every table object.
+# ---------------------------------------------------------------------------
+
+def build_number_of_entries_params(instances: int) -> List[DmParameter]:
+    """Build the *NumberOfEntries params auto-generated by CCSP framework."""
+    params = []
+
+    base = "Device.X_RDK_WanManager"
+
+    # Top-level table NOE
+    for table_name, noe_name in [
+        ("Group",         "GroupNumberOfEntries"),
+        ("CPEInterface",  "CPEInterfaceNumberOfEntries"),
+        ("Interface",     "InterfaceNumberOfEntries"),
+    ]:
+        params.append(DmParameter(
+            dm_path=f"{base}.{noe_name}",
+            param_name=noe_name,
+            data_type="unsignedInt",
+            writable=False,
+            object_path=base,
+            source="auto",
+        ))
+
+    # Per Interface
+    for i in range(1, instances + 1):
+        iface_path = f"{base}.Interface.{i}"
+        for noe_name in ["MarkingNumberOfEntries", "VirtualInterfaceNumberOfEntries"]:
+            params.append(DmParameter(
+                dm_path=f"{iface_path}.{noe_name}",
+                param_name=noe_name,
+                data_type="unsignedInt",
+                writable=False,
+                object_path=iface_path,
+                source="auto",
+            ))
+
+        # Per VirtualInterface
+        for j in range(1, instances + 1):
+            virtif_path = f"{iface_path}.VirtualInterface.{j}"
+            for noe_name in ["MarkingNumberOfEntries", "VLANNumberOfEntries"]:
+                params.append(DmParameter(
+                    dm_path=f"{virtif_path}.{noe_name}",
+                    param_name=noe_name,
+                    data_type="unsignedInt",
+                    writable=False,
+                    object_path=virtif_path,
+                    source="auto",
+                ))
+
+    return params
 
 
 # ---------------------------------------------------------------------------
@@ -72,7 +228,6 @@ TABLE_TYPES = {"dynamicTable", "writableTable", "staticTable"}
 
 
 def parse_type(raw_type: str) -> str:
-    """Simplify the XML type string to a short readable form."""
     if not raw_type:
         return "string"
     raw = raw_type.strip()
@@ -83,22 +238,16 @@ def parse_type(raw_type: str) -> str:
     if raw == "int":
         return "int"
     if raw.startswith("string"):
-        if ":" in raw:
-            return "string(mapped)"
-        return "string"
+        return "string(mapped)" if ":" in raw else "string"
     return raw.split(":")[0].split("[")[0].strip()
 
 
 def parse_writable(elem) -> bool:
     w = elem.findtext("writable")
-    if w is None:
-        return False
-    return w.strip().lower() == "true"
+    return w is not None and w.strip().lower() == "true"
 
 
-def collect_parameters(obj_elem, obj_path: str, xml_file: str,
-                       results: List[DmParameter]):
-    """Add all <parameter> children of this object element to results."""
+def collect_parameters(obj_elem, obj_path: str, source: str, results: List[DmParameter]):
     params_elem = obj_elem.find("parameters")
     if params_elem is None:
         return
@@ -113,40 +262,31 @@ def collect_parameters(obj_elem, obj_path: str, xml_file: str,
             data_type=parse_type(raw_type),
             writable=parse_writable(param),
             object_path=obj_path,
-            xml_file=xml_file,
+            source=source,
         ))
 
 
-def walk_objects(objects_elem, parent_path: str, instances: int,
-                 xml_file: str, results: List[DmParameter]):
-    """Recursively walk <objects><object>...</object></objects>."""
+def walk_objects(objects_elem, parent_path: str, instances: int, source: str, results: List[DmParameter]):
     if objects_elem is None:
         return
     for obj in objects_elem.findall("object"):
         obj_name = (obj.findtext("name") or "").strip()
         obj_type = (obj.findtext("objectType") or "object").strip()
-
         if obj_type in TABLE_TYPES:
             for idx in range(1, instances + 1):
                 obj_path = f"{parent_path}.{obj_name}.{idx}"
-                collect_parameters(obj, obj_path, xml_file, results)
-                walk_objects(obj.find("objects"), obj_path, instances, xml_file, results)
+                collect_parameters(obj, obj_path, source, results)
+                walk_objects(obj.find("objects"), obj_path, instances, source, results)
         else:
             obj_path = f"{parent_path}.{obj_name}"
-            collect_parameters(obj, obj_path, xml_file, results)
-            walk_objects(obj.find("objects"), obj_path, instances, xml_file, results)
+            collect_parameters(obj, obj_path, source, results)
+            walk_objects(obj.find("objects"), obj_path, instances, source, results)
 
 
-def parse_xml(xml_path: Path, instances: int) -> List[DmParameter]:
-    """Parse one XML config file and return a flat list of DmParameter."""
+def parse_xml(xml_path: Path, instances: int, source: str) -> List[DmParameter]:
     results = []
-    xml_file = xml_path.name
-
     raw = xml_path.read_text(encoding="utf-8", errors="replace")
-    # Strip <?ifdef ...?>, <?ifndef ...?>, <?else?>, <?endif?> processing instructions
-    # which are RDK-specific and not valid XML.
     cleaned = re.sub(r'<\?(?:ifdef|ifndef|else|endif)[^?]*\?>', '', raw)
-
     try:
         root = ET.fromstring(cleaned)
     except ET.ParseError as e:
@@ -160,44 +300,55 @@ def parse_xml(xml_path: Path, instances: int) -> List[DmParameter]:
     for top_obj in top_objects.findall("object"):
         top_name = (top_obj.findtext("name") or "").strip()
         obj_path = f"Device.{top_name}"
-        collect_parameters(top_obj, obj_path, xml_file, results)
-        walk_objects(top_obj.find("objects"), obj_path, instances, xml_file, results)
+        collect_parameters(top_obj, obj_path, source, results)
+        walk_objects(top_obj.find("objects"), obj_path, instances, source, results)
 
     return results
 
 
 # ---------------------------------------------------------------------------
-# Main extractor
+# Main extractor — combines all 3 sources
 # ---------------------------------------------------------------------------
 
 def extract_all(repo_root: Path, instances: int, xml_filter: str) -> DataModelReport:
     report = DataModelReport()
     seen = set()
 
-    xml_map = {
-        "v1": repo_root / "config" / "RdkWanManager.xml",
-        "v2": repo_root / "config" / "RdkWanManager_v2.xml",
-    }
+    def add(p: DmParameter):
+        if p.dm_path not in seen and p.dm_path.startswith("Device.X_RDK_WanManager"):
+            seen.add(p.dm_path)
+            report.parameters.append(p)
 
+    # 1. XML sources
+    xml_map = {
+        "v1": (repo_root / "config" / "RdkWanManager.xml",    "xml_v1"),
+        "v2": (repo_root / "config" / "RdkWanManager_v2.xml", "xml_v2"),
+    }
     to_parse = []
     if xml_filter in ("v1", "both"):
         to_parse.append(xml_map["v1"])
     if xml_filter in ("v2", "both"):
         to_parse.append(xml_map["v2"])
 
-    for xml_path in to_parse:
+    for xml_path, source in to_parse:
         if not xml_path.exists():
             print(f"WARNING: XML not found: {xml_path}", file=sys.stderr)
             continue
         print(f"[*] Parsing {xml_path.name} ...", file=sys.stderr)
-        for p in parse_xml(xml_path, instances):
-            if not p.dm_path.startswith("Device.X_RDK_WanManager"):
-                continue
-            if p.dm_path not in seen:
-                seen.add(p.dm_path)
-                report.parameters.append(p)
+        for p in parse_xml(xml_path, instances, source):
+            add(p)
 
-    # Sort alphabetically so output matches dmcli order
+    # 2. rbus-only params (from wanmgr_rbus_handler_apis.c)
+    print("[*] Adding rbus-only parameters ...", file=sys.stderr)
+    for p in build_rbus_params(instances):
+        add(p)
+
+    # 3. Auto-generated NumberOfEntries params
+    print("[*] Adding auto-generated NumberOfEntries params ...", file=sys.stderr)
+    for p in build_number_of_entries_params(instances):
+        add(p)
+
+    # Sort alphabetically
     report.parameters.sort(key=lambda p: p.dm_path)
     return report
 
@@ -209,12 +360,13 @@ def extract_all(repo_root: Path, instances: int, xml_filter: str) -> DataModelRe
 def format_text(report: DataModelReport) -> str:
     lines = [
         f"Device.X_RDK_WanManager.* Parameters — {len(report.parameters)} total",
-        "=" * 80,
+        "=" * 90,
     ]
     for i, p in enumerate(report.parameters, start=1):
         rw = "RW" if p.writable else "RO"
+        src = f"[{p.source}]"
         lines.append(f"  [{i:>3}]  {p.dm_path}")
-        lines.append(f"          type={p.data_type:<22} {rw}  ({p.xml_file})")
+        lines.append(f"          type={p.data_type:<22} {rw}  {src}")
     return "\n".join(lines)
 
 
@@ -235,10 +387,10 @@ def format_csv(report: DataModelReport) -> str:
     buf = io.StringIO()
     writer = csv.writer(buf)
     writer.writerow(["index", "dm_path", "param_name", "data_type",
-                     "writable", "object_path", "xml_file"])
+                     "writable", "object_path", "source"])
     for i, p in enumerate(report.parameters, start=1):
         writer.writerow([i, p.dm_path, p.param_name, p.data_type,
-                         p.writable, p.object_path, p.xml_file])
+                         p.writable, p.object_path, p.source])
     return buf.getvalue()
 
 
@@ -258,8 +410,8 @@ def parse_args():
     default_root = Path(__file__).resolve().parent.parent
     parser = argparse.ArgumentParser(
         description=(
-            "Generate the full Device.X_RDK_WanManager.* parameter list "
-            "from XML config files (matches dmcli output)."
+            "Generate the COMPLETE Device.X_RDK_WanManager.* parameter list "
+            "from XML + rbus registrations (matches dmcli output end-to-end)."
         )
     )
     parser.add_argument(
@@ -291,8 +443,15 @@ def main():
 
     report = extract_all(repo_root, args.instances, args.xml)
 
+    # Stats by source
+    from collections import Counter
+    src_counts = Counter(p.source for p in report.parameters)
     print(
-        f"[*] Total parameters extracted: {len(report.parameters)}",
+        f"\n[*] Total parameters: {len(report.parameters)}"
+        f"\n    {src_counts.get('xml_v1', 0):>4}  from RdkWanManager.xml (v1)"
+        f"\n    {src_counts.get('xml_v2', 0):>4}  from RdkWanManager_v2.xml (v2)"
+        f"\n    {src_counts.get('rbus', 0):>4}  rbus-only (wanmgr_rbus_handler_apis.c)"
+        f"\n    {src_counts.get('auto', 0):>4}  auto-generated NumberOfEntries",
         file=sys.stderr,
     )
 
