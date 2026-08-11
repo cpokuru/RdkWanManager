@@ -1,0 +1,2620 @@
+{
+  "parameters": [
+    {
+      "dm_path": "Device.X_RDK_WanManager.AllowRemoteInterfaces",
+      "param_name": "AllowRemoteInterfaces",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.AliasName",
+      "param_name": "AliasName",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.ConfigureWanEnable",
+      "param_name": "ConfigureWanEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.CustomConfigPath",
+      "param_name": "CustomConfigPath",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.DSLite.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.DSLite",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.DSLite.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.DSLite",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.DisplayName",
+      "param_name": "DisplayName",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.EnableCustomConfig",
+      "param_name": "EnableCustomConfig",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.EnableOperStatusMonitor",
+      "param_name": "EnableOperStatusMonitor",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.IP.IPv4Status",
+      "param_name": "IPv4Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.IP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.IP.IPv6Status",
+      "param_name": "IPv6Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.IP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.IP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.IP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.MAP.MAPTStatus",
+      "param_name": "MAPTStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.MAP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.MAP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.MAP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.IPCPEnable",
+      "param_name": "IPCPEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.IPCPStatus",
+      "param_name": "IPCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.IPv6CPEnable",
+      "param_name": "IPv6CPEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.IPv6CPStatus",
+      "param_name": "IPv6CPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.LCPStatus",
+      "param_name": "LCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.LinkStatus",
+      "param_name": "LinkStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.LinkType",
+      "param_name": "LinkType",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Phy.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Phy",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Phy.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Phy",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.ActiveLink",
+      "param_name": "ActiveLink",
+      "data_type": "boolean",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.EnableDHCP",
+      "param_name": "EnableDHCP",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.EnableDSLite",
+      "param_name": "EnableDSLite",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.EnableIPoEHealthCheck",
+      "param_name": "EnableIPoEHealthCheck",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.EnableMAPT",
+      "param_name": "EnableMAPT",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.Group",
+      "param_name": "Group",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.LinkStatus",
+      "param_name": "LinkStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.OperationalStatus",
+      "param_name": "OperationalStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.Priority",
+      "param_name": "Priority",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.RebootOnConfiguration",
+      "param_name": "RebootOnConfiguration",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.Refresh",
+      "param_name": "Refresh",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.SelectionTimeout",
+      "param_name": "SelectionTimeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan.Type",
+      "param_name": "Type",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.1.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.AliasName",
+      "param_name": "AliasName",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.ConfigureWanEnable",
+      "param_name": "ConfigureWanEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.CustomConfigPath",
+      "param_name": "CustomConfigPath",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.DSLite.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.DSLite",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.DSLite.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.DSLite",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.DisplayName",
+      "param_name": "DisplayName",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.EnableCustomConfig",
+      "param_name": "EnableCustomConfig",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.EnableOperStatusMonitor",
+      "param_name": "EnableOperStatusMonitor",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.IP.IPv4Status",
+      "param_name": "IPv4Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.IP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.IP.IPv6Status",
+      "param_name": "IPv6Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.IP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.IP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.IP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.MAP.MAPTStatus",
+      "param_name": "MAPTStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.MAP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.MAP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.MAP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.1",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Marking.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.IPCPEnable",
+      "param_name": "IPCPEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.IPCPStatus",
+      "param_name": "IPCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.IPv6CPEnable",
+      "param_name": "IPv6CPEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.IPv6CPStatus",
+      "param_name": "IPv6CPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.LCPStatus",
+      "param_name": "LCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.LinkStatus",
+      "param_name": "LinkStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.LinkType",
+      "param_name": "LinkType",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.PPP",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Phy.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Phy",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Phy.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Phy",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.ActiveLink",
+      "param_name": "ActiveLink",
+      "data_type": "boolean",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.EnableDHCP",
+      "param_name": "EnableDHCP",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.EnableDSLite",
+      "param_name": "EnableDSLite",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.EnableIPoEHealthCheck",
+      "param_name": "EnableIPoEHealthCheck",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.EnableMAPT",
+      "param_name": "EnableMAPT",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.Group",
+      "param_name": "Group",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.LinkStatus",
+      "param_name": "LinkStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.OperationalStatus",
+      "param_name": "OperationalStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.Priority",
+      "param_name": "Priority",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.RebootOnConfiguration",
+      "param_name": "RebootOnConfiguration",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.Refresh",
+      "param_name": "Refresh",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.SelectionTimeout",
+      "param_name": "SelectionTimeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan.Type",
+      "param_name": "Type",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.CPEInterface.2.Wan",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CPEInterfaceNumberOfEntries",
+      "param_name": "CPEInterfaceNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CurrentActiveDNS",
+      "param_name": "CurrentActiveDNS",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CurrentActiveInterface",
+      "param_name": "CurrentActiveInterface",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CurrentStandbyInterface",
+      "param_name": "CurrentStandbyInterface",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.CurrentStatus",
+      "param_name": "CurrentStatus",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Data",
+      "param_name": "Data",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.DnsConnectivityCheck.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.DnsConnectivityCheck",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Group.1.Policy",
+      "param_name": "Policy",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Group.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Group.1.ResetSelectedInterface",
+      "param_name": "ResetSelectedInterface",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Group.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Group.2.Policy",
+      "param_name": "Policy",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Group.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Group.2.ResetSelectedInterface",
+      "param_name": "ResetSelectedInterface",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Group.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.GroupNumberOfEntries",
+      "param_name": "GroupNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.InitialScanComplete",
+      "param_name": "InitialScanComplete",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.BaseInterface",
+      "param_name": "BaseInterface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.BaseInterfaceStatus",
+      "param_name": "BaseInterfaceStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.ConfigureWanEnable",
+      "param_name": "ConfigureWanEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.CustomConfigPath",
+      "param_name": "CustomConfigPath",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.DisplayName",
+      "param_name": "DisplayName",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.EnableCustomConfig",
+      "param_name": "EnableCustomConfig",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.EnableOperStatusMonitor",
+      "param_name": "EnableOperStatusMonitor",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.1.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.1.DSCPMark",
+      "param_name": "DSCPMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.1.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.1.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.1.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.2.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.2.DSCPMark",
+      "param_name": "DSCPMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.2.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.2.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Marking.2.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.MarkingNumberOfEntries",
+      "param_name": "MarkingNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.OperationalStatus",
+      "param_name": "OperationalStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Reset",
+      "param_name": "Reset",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Selection.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Selection.Group",
+      "param_name": "Group",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Selection.Priority",
+      "param_name": "Priority",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Selection.RequiresReboot",
+      "param_name": "RequiresReboot",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Selection.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Selection.Timeout",
+      "param_name": "Timeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.DSLite.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.DSLite.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.EnableDSLite",
+      "param_name": "EnableDSLite",
+      "data_type": "boolean",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.EnableIPoEHealthCheck",
+      "param_name": "EnableIPoEHealthCheck",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.EnableMAPT",
+      "param_name": "EnableMAPT",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.DHCPv4Interface",
+      "param_name": "DHCPv4Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.DHCPv6Interface",
+      "param_name": "DHCPv6Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.IPv4Address",
+      "param_name": "IPv4Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.IPv4Source",
+      "param_name": "IPv4Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.IPv4Status",
+      "param_name": "IPv4Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.IPv6Address",
+      "param_name": "IPv6Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.IPv6Prefix",
+      "param_name": "IPv6Prefix",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.IPv6Source",
+      "param_name": "IPv6Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.IPv6Status",
+      "param_name": "IPv6Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.Mode",
+      "param_name": "Mode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP.PreferredMode",
+      "param_name": "PreferredMode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.MAP.MAPTStatus",
+      "param_name": "MAPTStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.MAP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Marking.1.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Marking.2.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.MarkingNumberOfEntries",
+      "param_name": "MarkingNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP.IPCPStatus",
+      "param_name": "IPCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP.IPv6CPStatus",
+      "param_name": "IPv6CPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Reset",
+      "param_name": "Reset",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.Timeout",
+      "param_name": "Timeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.VLAN.1.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.VLAN.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.VLAN.2.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.VLAN.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.VLANNumberOfEntries",
+      "param_name": "VLANNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1.VlanStatus",
+      "param_name": "VlanStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.DSLite.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.DSLite.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.EnableDSLite",
+      "param_name": "EnableDSLite",
+      "data_type": "boolean",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.EnableIPoEHealthCheck",
+      "param_name": "EnableIPoEHealthCheck",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.EnableMAPT",
+      "param_name": "EnableMAPT",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.DHCPv4Interface",
+      "param_name": "DHCPv4Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.DHCPv6Interface",
+      "param_name": "DHCPv6Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.IPv4Address",
+      "param_name": "IPv4Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.IPv4Source",
+      "param_name": "IPv4Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.IPv4Status",
+      "param_name": "IPv4Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.IPv6Address",
+      "param_name": "IPv6Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.IPv6Prefix",
+      "param_name": "IPv6Prefix",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.IPv6Source",
+      "param_name": "IPv6Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.IPv6Status",
+      "param_name": "IPv6Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.Mode",
+      "param_name": "Mode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP.PreferredMode",
+      "param_name": "PreferredMode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.MAP.MAPTStatus",
+      "param_name": "MAPTStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.MAP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Marking.1.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Marking.2.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.MarkingNumberOfEntries",
+      "param_name": "MarkingNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP.IPCPStatus",
+      "param_name": "IPCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP.IPv6CPStatus",
+      "param_name": "IPv6CPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Reset",
+      "param_name": "Reset",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.Timeout",
+      "param_name": "Timeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.VLAN.1.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.VLAN.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.VLAN.2.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.VLAN.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.VLANNumberOfEntries",
+      "param_name": "VLANNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2.VlanStatus",
+      "param_name": "VlanStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.1.VirtualInterfaceNumberOfEntries",
+      "param_name": "VirtualInterfaceNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.1",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.BaseInterface",
+      "param_name": "BaseInterface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.BaseInterfaceStatus",
+      "param_name": "BaseInterfaceStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.ConfigureWanEnable",
+      "param_name": "ConfigureWanEnable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.CustomConfigPath",
+      "param_name": "CustomConfigPath",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.DisplayName",
+      "param_name": "DisplayName",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.EnableCustomConfig",
+      "param_name": "EnableCustomConfig",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.EnableOperStatusMonitor",
+      "param_name": "EnableOperStatusMonitor",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.1.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.1.DSCPMark",
+      "param_name": "DSCPMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.1.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.1.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.1.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.2.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.2.DSCPMark",
+      "param_name": "DSCPMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.2.EthernetPriorityMark",
+      "param_name": "EthernetPriorityMark",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.2.SKBMark",
+      "param_name": "SKBMark",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Marking.2.SKBPort",
+      "param_name": "SKBPort",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.MarkingNumberOfEntries",
+      "param_name": "MarkingNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.OperationalStatus",
+      "param_name": "OperationalStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Reset",
+      "param_name": "Reset",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Selection.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Selection.Group",
+      "param_name": "Group",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Selection.Priority",
+      "param_name": "Priority",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Selection.RequiresReboot",
+      "param_name": "RequiresReboot",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Selection.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Selection.Timeout",
+      "param_name": "Timeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.Selection",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.DSLite.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.DSLite.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.EnableDSLite",
+      "param_name": "EnableDSLite",
+      "data_type": "boolean",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.EnableIPoEHealthCheck",
+      "param_name": "EnableIPoEHealthCheck",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.EnableMAPT",
+      "param_name": "EnableMAPT",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.DHCPv4Interface",
+      "param_name": "DHCPv4Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.DHCPv6Interface",
+      "param_name": "DHCPv6Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.IPv4Address",
+      "param_name": "IPv4Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.IPv4Source",
+      "param_name": "IPv4Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.IPv4Status",
+      "param_name": "IPv4Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.IPv6Address",
+      "param_name": "IPv6Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.IPv6Prefix",
+      "param_name": "IPv6Prefix",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.IPv6Source",
+      "param_name": "IPv6Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.IPv6Status",
+      "param_name": "IPv6Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.Mode",
+      "param_name": "Mode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP.PreferredMode",
+      "param_name": "PreferredMode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.MAP.MAPTStatus",
+      "param_name": "MAPTStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.MAP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Marking.1.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Marking.2.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.MarkingNumberOfEntries",
+      "param_name": "MarkingNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP.IPCPStatus",
+      "param_name": "IPCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP.IPv6CPStatus",
+      "param_name": "IPv6CPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Reset",
+      "param_name": "Reset",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.Timeout",
+      "param_name": "Timeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.VLAN.1.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.VLAN.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.VLAN.2.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.VLAN.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.VLANNumberOfEntries",
+      "param_name": "VLANNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1.VlanStatus",
+      "param_name": "VlanStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Alias",
+      "param_name": "Alias",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.DSLite.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.DSLite.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.DSLite",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Enable",
+      "param_name": "Enable",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.EnableDSLite",
+      "param_name": "EnableDSLite",
+      "data_type": "boolean",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.EnableIPoEHealthCheck",
+      "param_name": "EnableIPoEHealthCheck",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.EnableMAPT",
+      "param_name": "EnableMAPT",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.DHCPv4Interface",
+      "param_name": "DHCPv4Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.DHCPv6Interface",
+      "param_name": "DHCPv6Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.IPv4Address",
+      "param_name": "IPv4Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.IPv4Source",
+      "param_name": "IPv4Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.IPv4Status",
+      "param_name": "IPv4Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.IPv6Address",
+      "param_name": "IPv6Address",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.IPv6Prefix",
+      "param_name": "IPv6Prefix",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.IPv6Source",
+      "param_name": "IPv6Source",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.IPv6Status",
+      "param_name": "IPv6Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.Mode",
+      "param_name": "Mode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP.PreferredMode",
+      "param_name": "PreferredMode",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.IP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.MAP.MAPTStatus",
+      "param_name": "MAPTStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.MAP.Path",
+      "param_name": "Path",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.MAP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Marking.1.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Marking.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Marking.2.Entry",
+      "param_name": "Entry",
+      "data_type": "int",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Marking.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.MarkingNumberOfEntries",
+      "param_name": "MarkingNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Name",
+      "param_name": "Name",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP.IPCPStatus",
+      "param_name": "IPCPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP.IPv6CPStatus",
+      "param_name": "IPv6CPStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.PPP",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Reset",
+      "param_name": "Reset",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Status",
+      "param_name": "Status",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.Timeout",
+      "param_name": "Timeout",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.VLAN.1.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.VLAN.1",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.VLAN.2.Interface",
+      "param_name": "Interface",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.VLAN.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.VLANNumberOfEntries",
+      "param_name": "VLANNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2.VlanStatus",
+      "param_name": "VlanStatus",
+      "data_type": "string(mapped)",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterface.2",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Interface.2.VirtualInterfaceNumberOfEntries",
+      "param_name": "VirtualInterfaceNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager.Interface.2",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.InterfaceActiveStatus",
+      "param_name": "InterfaceActiveStatus",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.InterfaceAvailableStatus",
+      "param_name": "InterfaceAvailableStatus",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.InterfaceIpStatus",
+      "param_name": "InterfaceIpStatus",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "rbus"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.InterfaceNumberOfEntries",
+      "param_name": "InterfaceNumberOfEntries",
+      "data_type": "unsignedInt",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "auto"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Policy",
+      "param_name": "Policy",
+      "data_type": "string(mapped)",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.ResetActiveInterface",
+      "param_name": "ResetActiveInterface",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.ResetDefaultConfig",
+      "param_name": "ResetDefaultConfig",
+      "data_type": "boolean",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.RestorationDelay",
+      "param_name": "RestorationDelay",
+      "data_type": "unsignedInt",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.Version",
+      "param_name": "Version",
+      "data_type": "string",
+      "writable": false,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v2"
+    },
+    {
+      "dm_path": "Device.X_RDK_WanManager.WanFailoverData",
+      "param_name": "WanFailoverData",
+      "data_type": "string",
+      "writable": true,
+      "object_path": "Device.X_RDK_WanManager",
+      "source": "xml_v1"
+    }
+  ]
+}
