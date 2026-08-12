@@ -38,7 +38,7 @@ class DmParameter:
 class DmlXml:
     path: Path
     root: ET.Element
-    prefixes: list[str]
+    prefix: str
 
 
 def clean_xml(raw_xml: str) -> str:
@@ -150,16 +150,16 @@ def parse_dml_xml(dml_xml: DmlXml, instances: int) -> list[DmParameter]:
     if top_objects is None:
         return results
 
-    for top_obj in top_objects.findall("object"):
-        top_name = (top_obj.findtext("name") or "").strip()
-        if not top_name:
-            continue
-        top_path = f"Device.{top_name}"
-        collect_parameters(top_obj, top_path, dml_xml.path.name, results)
-        child_objects = top_obj.find("objects")
-        if child_objects is not None:
-            for child in child_objects.findall("object"):
-                walk_object(child, top_path, instances, dml_xml.path.name, results)
+    top_obj = top_objects.find("object")
+    if top_obj is None:
+        return results
+
+    top_path = dml_xml.prefix
+    collect_parameters(top_obj, top_path, dml_xml.path.name, results)
+    child_objects = top_obj.find("objects")
+    if child_objects is not None:
+        for child in child_objects.findall("object"):
+            walk_object(child, top_path, instances, dml_xml.path.name, results)
 
     return results
 
@@ -182,14 +182,13 @@ def discover_dml_xml_files(config_dir: Path) -> list[DmlXml]:
         if top_objects is None:
             continue
 
-        prefixes = []
-        for top_obj in top_objects.findall("object"):
-            top_name = (top_obj.findtext("name") or "").strip()
-            if top_name:
-                prefixes.append(f"Device.{top_name}")
+        top_obj = top_objects.find("object")
+        if top_obj is None:
+            continue
 
-        if prefixes:
-            discovered.append(DmlXml(path=xml_path, root=root, prefixes=prefixes))
+        top_name = (top_obj.findtext("name") or "").strip()
+        if top_name:
+            discovered.append(DmlXml(path=xml_path, root=root, prefix=f"Device.{top_name}"))
 
     return discovered
 
@@ -295,8 +294,7 @@ def parse_args() -> argparse.Namespace:
 def print_stats(parameters: list[DmParameter], dml_xmls: list[DmlXml], config_dir: Path) -> None:
     print(f"[*] Found {len(dml_xmls)} DML XML file(s) in {config_dir}", file=sys.stderr)
     for dml_xml in dml_xmls:
-        prefix_text = ", ".join(dml_xml.prefixes)
-        print(f"[*] Parsing {dml_xml.path.name} ... \u2192 prefix: {prefix_text}", file=sys.stderr)
+        print(f"[*] Parsing {dml_xml.path.name} ... \u2192 prefix: {dml_xml.prefix}", file=sys.stderr)
 
     print(f"[*] Total parameters: {len(parameters)}", file=sys.stderr)
     counts = Counter(param.xml_file for param in parameters if param.source == "xml")
