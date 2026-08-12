@@ -12,6 +12,7 @@ import csv
 import io
 import json
 import re
+import signal
 import sys
 import xml.etree.ElementTree as ET
 from collections import Counter
@@ -306,6 +307,9 @@ def print_stats(parameters: list[DmParameter], dml_xmls: list[DmlXml], config_di
 
 
 def main() -> int:
+    if hasattr(signal, "SIGPIPE"):
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
     config_dir = Path(args.config_dir).resolve() if args.config_dir else repo_root / "config"
