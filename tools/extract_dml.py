@@ -328,7 +328,10 @@ def main() -> int:
     parameters = dedupe_parameters(parameters)
     parameters = filter_parameters(parameters, args.prefix)
     print_stats(parameters, dml_xmls, config_dir)
-    print(FORMATTERS[args.output](parameters))
+    try:
+        print(FORMATTERS[args.output](parameters))
+    except BrokenPipeError:
+        return 0
     return 0
 
 
